@@ -2,11 +2,11 @@ let Note = require("./note-model").Note;
 
 
 //console.log(notey.content());
-console.log(newNote = Note.addNote("Hi"));
-console.log(newNoteContent = Note.content());
-console.log(Note.content === Note.content)
+console.log(note = new Note("Hi"));
+console.log(note.content());
 
-if (newNoteContent !== "Hi") {
+
+if (note.content() !== "Hi") {
     throw new Error ("Does not equal Hi");
 } else {
     console.log(".")

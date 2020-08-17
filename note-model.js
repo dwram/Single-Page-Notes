@@ -1,23 +1,13 @@
-let Note = (function(){
-    'use strict';
-
-    function addNote(text) {
+function Note(text){
         this.text = text
-        return this
-    }
+}
 
-    function content() {
-        return this.text
-    }
-
-    return {
-        addNote: addNote,
-        content: content
-    }
-
-})();
+Note.prototype.content = function() {
+    return this.text;
+};
 
 exports.Note = Note;
+exports.content = Note.prototype.content;
 
 //notey = new Note("Hi")
 //console.log(notey);
