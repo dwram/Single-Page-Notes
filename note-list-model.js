@@ -9,6 +9,7 @@
     }
 
     NoteList.prototype.addNote = function(note) {
+        note = new Note(note)
         return this.notes.push(note);
     }
 
