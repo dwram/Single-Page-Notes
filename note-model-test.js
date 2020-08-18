@@ -16,7 +16,7 @@ assert.isTrue(noteList.content()[0].text === 'hi')
 
 // note lists view
 noteListView = new NoteListView(noteList)
-assert.isTrue(noteListView.convertToHtml()[0] === ("<ul><li><div> Note number 1: hi</div></li></ul>"));
+assert.isTrue(noteListView.convertToHtml()[0] === ("<ul><li><div> Note 1: hi</div></li></ul>"));
 
 
 //assert.isTrue(noteController.NoteListView.noteList[0] === ("<ul><li><div> Note number 1: hi</div></li></ul>"));
@@ -30,3 +30,9 @@ assert.isTrue(singleNote.content() ===  ("<div>" + "hi" + "<div>"));
 note3 = new Note("this is a longer than twenty characters");
 singleNote2 = new SingleNote(note3)
 assert.isTrue(singleNote2.content() ===  ("<div>" + "this is a longer tha" + "<div>"));
+
+// Note List longer than 20
+noteList2 = new NoteList()
+noteList2.addNote("this is a longer than twenty characters");
+noteListView2 = new NoteListView(noteList2)
+assert.isTrue(noteListView2.convertToHtml()[0] === ("<ul><li><div> Note 1: this is a longer tha</div></li></ul>"))

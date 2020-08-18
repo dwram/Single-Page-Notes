@@ -5,7 +5,7 @@
     }
 
     SingleNote.prototype.content = function(limit = 20) {
-        return "<div>" + this.text.slice(0, limit)  + "<div>";
+        return ("<div>" + this.text.slice(0, limit)  + "<div>");
     }
 
     exports.SingleNote = SingleNote;
