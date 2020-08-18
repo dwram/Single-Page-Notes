@@ -24,7 +24,17 @@ console.log("Note controller...");
         exports.NoteController = NoteController;
 
         this.cl = new NoteController()
+
+
+        const form = document.getElementById("text");
+        form.addEventListener("submit", showNoteCurrentPage);
+
+        function showNoteCurrentPage(event) {
+            console.log(event)
+            event.preventDefault();
+        }
     }
+
 
 })(this);
 
