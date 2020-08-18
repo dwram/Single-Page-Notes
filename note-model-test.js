@@ -18,6 +18,10 @@ assert.isTrue(noteList.content()[0].text === 'hi')
 noteListView = new NoteListView(noteList)
 assert.isTrue(noteListView.convertToHtml()[0] === ("<ul><li><div> Note number 1: hi</div></li></ul>"));
 
-//
 
 //assert.isTrue(noteController.NoteListView.noteList[0] === ("<ul><li><div> Note number 1: hi</div></li></ul>"));
+
+// Single note
+
+singleNote = new SingleNote(note)
+assert.isTrue(singleNote.content() ===  ("<div>" + "hi" + "<div>"));
