@@ -1,13 +1,19 @@
-let Note = require("./note-model").Note;
+console.log("running test suite")
 
 
-//console.log(notey.content());
-console.log(note = new Note("Hi"));
-console.log(note.content());
+// note
+note = new Note("hi")
+assert.isTrue(note.text === 'hi')
+assert.isTrue(note.text !== undefined)
+note2 = new Note("bye")
 
+// note lists
+noteList = new NoteList();
+assert.isTrue(noteList.content.length === 0)
+noteList.addNote(note)
+noteList.addNote(note2)
+assert.isTrue(noteList.content()[0].text === 'hi')
 
-if (note.content() !== "Hi") {
-    throw new Error ("Does not equal Hi");
-} else {
-    console.log(".")
-}
+// note lists view
+noteListView = new NoteListView(noteList)
+assert.isTrue(noteListView.convertToHtml()[0] === ("<ul><li><div> Note number 1: hi</div></li></ul>"));
