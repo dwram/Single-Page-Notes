@@ -25,3 +25,8 @@ assert.isTrue(noteListView.convertToHtml()[0] === ("<ul><li><div> Note number 1:
 
 singleNote = new SingleNote(note)
 assert.isTrue(singleNote.content() ===  ("<div>" + "hi" + "<div>"));
+
+// Single note first 20
+note3 = new Note("this is a longer than twenty characters");
+singleNote2 = new SingleNote(note3)
+assert.isTrue(singleNote2.content() ===  ("<div>" + "this is a longer tha" + "<div>"));

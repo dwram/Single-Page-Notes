@@ -1,11 +1,11 @@
 (function(exports){
 
     function SingleNote(note) {
-        this.text = "<div>" + note.content() + "<div>"
+        this.text =  note.content()
     }
 
-    SingleNote.prototype.content = function() {
-        return this.text;
+    SingleNote.prototype.content = function(limit = 20) {
+        return "<div>" + this.text.slice(0, limit)  + "<div>";
     }
 
     exports.SingleNote = SingleNote;
