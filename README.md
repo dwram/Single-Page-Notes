@@ -6,10 +6,10 @@
 
 <br/>
 
-<img src="https://i.gyazo.com/f1ca5fa01884a43548be839edaee7d90.png">Application</img>
+<img src="https://i.gyazo.com/0a95b95a1e2c35d12b5fd5f9ff765228.png">Application</img>
 <br/>
 
-<img src="https://i.gyazo.com/55e50e1db1da437873c9dfd99bb4819d.png">Testing suite</img>
+<img src="https://i.gyazo.com/2e23d4088c4591f3c846f077b921258d.png">Fully crafted testing suite</img>
 
 ###Objectives
 
