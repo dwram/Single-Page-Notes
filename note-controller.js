@@ -16,7 +16,7 @@
     exports.onload = function () {
 
         let app = document.getElementById("app");
-
+        let list = document.getElementById("list");
 
         window.addEventListener("hashchange", singleNoteContent)
 
@@ -27,6 +27,8 @@
         }
 
         NoteController.prototype.singleNoteGetter = function(id) {
+            list.style.visibility = "visible";
+            list.innerHTML = this.getHTML()
             return app.innerText = this.NoteListView.getNote(id);
         }
 
@@ -38,9 +40,9 @@
         // Add note on form submission
         function showNoteOnCurrentPage(event) {
             event.preventDefault();
-            //console.log(cl.NoteListView.noteList)
             note = cl.NoteListView.noteList.addNote(event.target[0].value)
             cl.NoteListView.getNote(note.id)
+            list.style.visibility = "hidden";
             cl.getHTML();
             form.reset();
         }

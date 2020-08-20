@@ -16,8 +16,6 @@ var $noteCount = 0;
         return this.id
     }
 
-
-
     exports.Note = Note
 
 })(this);
