@@ -28,6 +28,7 @@ var assert = {
         if (isAfterEachOn) {
             $noteCount = 0;
         }
+        updateTests();
     },
 
     isTrue: function(assertionToCheck, title = 'untitled') {
@@ -35,9 +36,14 @@ var assert = {
         if (!assertionToCheck) {
             if (this.isTrue.arguments)  { console.log((this.isTrue.arguments)); }
             if (this.isTrue.caller)  { console.log((this.isTrue.caller)); }
-            throw new Error(i++ + ") Assertion failed: (" + title + '): ' + assertionToCheck + " is not truthy");
+            let test = i++ + ") Assertion failed: (" + title + '): ' + assertionToCheck + " is not truthy";
+            this.tests.push(test);
+            updateTests();
+            throw new Error(test);
         } else {
-            console.log(i++ + ") " + title + ': PASSED!');
+            let test = i++ + ") " + title + ': PASSED!'
+            this.tests.push(test)
+            console.log(test);
         }
         this.afterEach();
     },
@@ -47,9 +53,15 @@ var assert = {
         if (assertionToCheck) {
             if (this.isFalse.arguments) { console.log(this.isFalse.arguments); }
             if (this.isFalse.caller)  { console.log((this.isFalse.caller)); }
-            throw new Error(i++ + ") Assertion failed: (" + title + '): ' + assertionToCheck + " is not falsy");
+            let test = i++ + ") Assertion failed: (" + title + '): ' + assertionToCheck + " is not falsey";
+            this.tests.push(test);
+            updateTests();
+            throw new Error(test);
+            //throw new Error(i++ + ") Assertion failed: (" + title + '): ' + assertionToCheck + " is not falsy");
         } else {
-            console.log(i++ + ") " + title + ': PASSED!');
+            let test = i++ + ") " + title + ': PASSED!'
+            this.tests.push(test)
+            console.log(test);
         }
         this.afterEach();
     },
@@ -59,10 +71,22 @@ var assert = {
         if (assertionOne !== assertionTwo) {
             if (this.isEqTo.arguments) console.log(this.isEqTo.arguments)
             if (this.isEqTo.caller)  { console.log((this.isEqTo.caller)); }
-            throw new Error(i++ + ") Assertion failed: (" + title + '): ' + assertionOne + " is not equal to " + assertionTwo + "");
+            let test = i++ + ") Assertion failed: (" + title + '): ' + assertionOne + " is not equal to " + assertionTwo;
+            this.tests.push(test);
+            updateTests();
+            throw new Error(test);
+            //throw new Error(i++ + ") Assertion failed: (" + title + '): ' + assertionOne + " is not equal to " + assertionTwo + "");
         } else {
-            console.log(i++ + ") " + title + ': PASSED!');
+            let test = i++ + ") " + title + ': PASSED!'
+            this.tests.push(test)
+            console.log(test);
         }
         this.afterEach();
     },
+
+    tests: [],
+}
+
+function updateTests() {
+    document.getElementById("tests").innerHTML = "Test suite <br/>" + assert.tests.map(tests => tests + "<br/>").join(" ")
 }
