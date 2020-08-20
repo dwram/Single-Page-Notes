@@ -2,16 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <script src="assert.js"></script>
-    <script src="note-model.js"></script>
-    <script src="note-list-model.js"></script>
-    <script src="note-list-view.js"></script>
-    <script src="single-note-view.js"></script>
-    <script src="note-controller.js"></script>
-    <script src="note-model-test.js"></script>
     <title>Test</title>
 </head>
 <body>
 
+<div id="app">Hello</div>
+<label for="text_area">Text area</label>
+<form id="text" method="get" action="#note/new">
+    <textarea id="text_area" name="text_area" rows="4" cols="50"></textarea>
+    <input type="submit" id="submit">
+</form>
+
+
+
 </body>
+<script src="testapp.js"></script>
+<script src="assert.js"></script>
+<script src="note-model.js"></script>
+<script src="note-list-model.js"></script>
+<script src="note-list-view.js"></script>
+<script src="single-note-view.js"></script>
+<script src="note-controller.js"></script>
+<script src="note-model-test.js"></script>
 </html>
