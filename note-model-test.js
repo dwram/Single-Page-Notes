@@ -107,7 +107,7 @@ function noteCreationTests() {
 
     function runPreNoteCreationTests() {
         //assert.isTrue(newNoteController.NoteListView.getNote(0) === undefined, "Testing for an empty note list")
-        assert.isTrue(app.innerText === 'Hllo' || app.innerText === '', "Testing for empty app div inner text")
+        assert.isTrue(app.innerText === 'Hello' || app.innerText === '', "Testing for empty app div inner text")
     }
 
     runPreNoteCreationTests();
