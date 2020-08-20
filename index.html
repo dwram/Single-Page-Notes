@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <style>  *{font-family: 'Courgette', cursive;} </style>
     <meta charset="UTF-8">
     <script src="app.js"></script>
     <script src="assert.js"></script>
@@ -12,12 +14,19 @@
 </head>
 <body>
 
-<div id="app">Hello</div>
-<label for="text_area">Text area</label>
+<h1>Notes</h1>
+<div style="width: 400px; height: 300px; border-style:solid; border-color: black; padding: 10px">
+<label for="text_area" style="font-size: 20px; padding-bottom: 5px">Enter your new note</label>
+    <br/><br/>
 <form id="text" method="get" action="#note/new">
-    <textarea id="text_area" name="text_area" rows="4" cols="50"></textarea>
-    <input type="submit">
+    <textarea id="text_area" name="text_area" rows="4" cols="50" style="height: 200px">
+    </textarea>
+    <br/>
+    <input type="submit" value="Create">
 </form>
+</div>
+
+<div id="app"></div>
 
 </body>
 </html>

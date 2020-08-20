@@ -42,6 +42,7 @@
             note = cl.NoteListView.noteList.addNote(event.target[0].value)
             cl.NoteListView.getNote(note.id)
             cl.getHTML();
+            form.reset();
         }
 
 
