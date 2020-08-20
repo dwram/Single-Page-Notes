@@ -1,6 +1,8 @@
 i = 0
+
+// Before/After each test defaults to true. Toggle to turn off. Contents of these objects will be evaluated if true.
 let isAfterEachOn = true;
-let isBeforeEachOn = true; // Therefore, your NOTE id WILL RESET
+let isBeforeEachOn = true;
 
 const assert = {
 
@@ -44,7 +46,7 @@ const assert = {
             updateTests();
             throw new Error(test);
         } else {
-            test += ") " + title + ': PASSED!';
+            test += ") " + title + ' <b>PASSED!</b>';
             this.tests.push(test)
             console.log(test);
         }
@@ -63,7 +65,7 @@ const assert = {
             throw new Error(test);
             //throw new Error(i++ + ") Assertion failed: (" + title + '): ' + assertionToCheck + " is not falsy");
         } else {
-            test += ") " + title + ': PASSED!';
+            test += ") " + title + ' <b>PASSED!</b>';
             this.tests.push(test);
             console.log(test);
         }
@@ -76,13 +78,14 @@ const assert = {
         if (assertionOne !== assertionTwo) {
             if (this.isEqTo.arguments) console.log(this.isEqTo.arguments)
             if (this.isEqTo.caller)  { console.log((this.isEqTo.caller)); }
-            test += ") Assertion failed: (" + title + '): ' + assertionOne + " is not equal to " + assertionTwo;
+            test += ") Assertion failed: (" + title + '): ' + assertionOne + " <b> is not equal to </b> " + assertionTwo;
             this.tests.push(test);
             updateTests();
             throw new Error(test);
             //throw new Error(i++ + ") Assertion failed: (" + title + '): ' + assertionOne + " is not equal to " + assertionTwo + "");
         } else {
-            test += ") " + title + ': PASSED!'
+            //test += ') ' + title + ":" + assertionOne + "<b> is equal to </b>" + assertionTwo + '<b>PASSED!</b>'
+            test += ') ' + title + '<b> PASSED!</b>'
             this.tests.push(test)
             console.log(test);
         }
@@ -92,6 +95,7 @@ const assert = {
     tests: [],
 }
 
+//Change element ID to match the element in your SpecRunner as desired
 function updateTests() {
-    document.getElementById("tests").innerHTML = "<h1>Test suite</h1><br/>" + assert.tests.map(test => test + "<br/>").join(" ")
+    document.getElementById("tests").innerHTML = "<h1>Test suite</h1><br/>" + assert.tests.map(test => test + "<br/>" + "<hr>").join(" ")
 }

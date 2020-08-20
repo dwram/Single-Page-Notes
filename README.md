@@ -3,8 +3,13 @@
 ![Creating notes in the application](noteGif.gif)
 
 ##Single page application in pure Javascript
+
+<br/>
+
 <img src="https://i.gyazo.com/f1ca5fa01884a43548be839edaee7d90.png">Application</img>
-<img src="https://i.gyazo.com/eabb090fa3c121c002fd0bdfbea18e6c.png">Testing suite</img>
+<br/>
+
+<img src="https://i.gyazo.com/55e50e1db1da437873c9dfd99bb4819d.png">Testing suite</img>
 
 ###Objectives
 

@@ -46,7 +46,7 @@ singleNoteTest();
 // Single note first 20
 function singleNoteFirstTwenty() {
     let singleNote2 = new SingleNote(note3);
-    assert.isTrue(singleNote2.content() === ("<div>" + "this is a longer than twenty characters" + "<div>"), 'Single Note abbreviation');
+    assert.isEqTo(singleNote2.content(),("<div>" + "this is a longer than twenty characters" + "<div>"), 'Single Note abbreviation');
 }
 
 singleNoteFirstTwenty()
