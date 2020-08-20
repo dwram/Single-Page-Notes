@@ -1,9 +1,7 @@
 (function (exports) {
 
-    this.nl = new NoteList();
-
-    function NoteController(NoteList = nl) {
-        this.NoteListView = new NoteListView(NoteList);
+    function NoteController(noteControllerNoteList = new NoteList()) {
+        this.NoteListView = new NoteListView(noteControllerNoteList);
     }
 
     NoteController.prototype.getHTML = function () {
