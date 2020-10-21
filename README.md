@@ -11,13 +11,13 @@
 
 <img src="https://i.gyazo.com/2e23d4088c4591f3c846f077b921258d.png">Fully crafted testing suite</img>
 
-###Objectives
+<h3>Objectives</h3>
 
 - Writing a front-end, single page app using only pure Javascript
 - Implementing functionality dependent upon asynchronous behaviour in Javascript
 - Create and utilizing a test driven framework in pure Javascript
 
-###Technology used
+<h3>Technology used</h3>
 - Javascript
 - HTTP-Server
 
