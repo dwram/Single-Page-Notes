@@ -1,15 +1,16 @@
-#Notes
+<h1>Notes</h1>
 
 ![Creating notes in the application](noteGif.gif)
 
-##Single page application in pure Javascript
+<h3>Single page application in pure Javascript</h3>
 
 <br/>
 
 <img src="https://i.gyazo.com/0a95b95a1e2c35d12b5fd5f9ff765228.png">Application</img>
 <br/>
 
-<img src="https://i.gyazo.com/2e23d4088c4591f3c846f077b921258d.png">Fully crafted testing suite</img>
+<img src="https://i.gyazo.com/2e23d4088c4591f3c846f077b921258d.png"></img>
+Fully crafted testing suite
 
 <h3>Objectives</h3>
 
